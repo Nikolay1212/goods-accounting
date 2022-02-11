@@ -15,3 +15,4 @@ How to run this application
             $ mvn clean package spring-boot:repackage
     3. Start the JAR file using java:
             $ java -jar /path_to_jar/goods-accounting-0.1.jar
+    4. Use default admin login "admin", password "123"; default user login "user", password "123"
