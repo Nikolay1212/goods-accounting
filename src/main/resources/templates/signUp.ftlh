@@ -12,6 +12,7 @@
 <body>
 <@spring.bind "signUpForm"/>
 <form action="/signUp" method="post">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
     <label for="login">Enter login:
         <input id="login" name="login" placeholder="Login">
     </label>

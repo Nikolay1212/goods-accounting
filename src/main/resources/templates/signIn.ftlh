@@ -9,6 +9,7 @@
 </head>
 <body>
 <form action="/signIn" method="post">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
     <label for="login">Enter login:
         <input id="login" name="login" placeholder="Login">
     </label>
