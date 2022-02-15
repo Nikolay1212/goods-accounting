@@ -11,8 +11,12 @@ How to run this application
 
     1. Change the src/main/resources/application.properties with your MongoDB instance properties.
         It looks like: mongodb+srv://<mongo-db-user>:<mongo-db-password>@<your-cluster>/mongo-db-name
-    2. Package JAR using follow command:
-            $ mvn clean package spring-boot:repackage
-    3. Start the JAR file using java:
-            $ java -jar /path_to_jar/goods-accounting-0.1.jar
-    4. Use default admin login "admin", password "123"; default user login "user", password "123"
+    2. Build docker-image using follow command:
+            $ docker build -t <your_name> .
+    3. Find your image: 
+            $ docker images
+    4. Run image using command and image_id:
+            $ docker run -p <your_port>:8080 <image_id>
+    5. First check "localhost:8080/signIn" (default login for admin: 'admin', password '123', for user: 'user', password '123')
+    6. Then for "admin-role" check the "localhost:8080/admin/items"
+    7. For "user-role" check the "localhost:8080/items"
