@@ -15,6 +15,7 @@
     <fieldset>
         <legend><h2>Add Item</h2></legend>
         <form action="/admin/item/add" enctype="multipart/form-data" method="post">
+            <h2><a href="/logout">Log out</a></h2>
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
             <p><input type="file" name="file"><input type="submit" value="Upload"></p>
         </form>
